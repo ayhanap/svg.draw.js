@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/svgdotjs/svg.draw.js",
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "repository": {
     "type": "git",
@@ -66,6 +67,6 @@
     "rollup-plugin-uglify-es": "0.0.1"
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.0.0"
+    "@svgdotjs/svg.js": "git+https://github.com/grupopulpo/svg.js.git"
   }
 }
