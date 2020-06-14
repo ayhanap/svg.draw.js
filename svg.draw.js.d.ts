@@ -5,3 +5,9 @@ declare module "@svgdotjs/svg.js" {
     draw(): this
   }
 }
+
+declare function registerPlugin(name: string, obj: any): any
+
+declare module "svg.draw.js" {
+  export = { registerPlugin }
+}
