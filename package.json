@@ -2,7 +2,7 @@
   "name": "svg.draw.js",
   "version": "3.0.0",
   "description": "An extension for svg.js which allows to draw elements with mouse",
-  "main": "dist/svg.draw.js",
+  "main": "src/svg.draw.js",
   "unpkg": "dist/svg.draw.min.js",
   "jsdelivr": "dist/svg.draw.min.js",
   "browser": "src/svg.draw.js",
