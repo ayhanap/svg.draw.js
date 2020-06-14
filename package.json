@@ -23,7 +23,8 @@
   "homepage": "https://github.com/svgdotjs/svg.draw.js",
   "files": [
     "dist/",
-    "src/"
+    "src/",
+    "svg.draw.js.d.ts"
   ],
   "repository": {
     "type": "git",
