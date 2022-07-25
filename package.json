@@ -1,77 +1,67 @@
 {
-  "name": "svg.draw.js",
-  "version": "3.0.0",
-  "description": "An extension for svg.js which allows to draw elements with mouse",
+  "name": "react-boilerplate",
+  "version": "0.1.0",
+  "description": "",
   "main": "src/main.js",
-  "unpkg": "dist/svg.draw.min.js",
-  "typings": "./svg.draw.js.d.ts",
-  "jsdelivr": "dist/svg.draw.min.js",
-  "keywords": [
-    "svg.js",
-    "draw",
-    "mouse"
-  ],
-  "bugs": "https://github.com/svgdotjs/svg.draw.js/issues",
-  "license": "MIT",
-  "author": {
-    "name": "Ulrich-Matthias Schäfer"
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "dev:hot": "npm run dev -- --hot",
+    "watch": "webpack --watch --config webpack.config.dev.js",
+    "test": "jest",
+    "format": "pretty-quick",
+    "lint": "eslint ./"
   },
-  "contributors": [
-    {
-      "name": "Ulrich-Matthias Schäfer"
-    },
-    {
-      "name": "Ayhan APAYDIN"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
     }
-  ],
-  "homepage": "https://github.com/svgdotjs/svg.draw.js",
-  "files": [
-    "dist/",
-    "src/",
-    "svg.draw.js.d.ts"
-  ],
+  },
+  "author": "",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/svgdotjs/svg.draw.js.git"
+    "url": "git+https://github.com/avanslaars/egghead-react-boilerplate.git"
   },
-  "scripts": {
-    "build": "npm run fix && npm run rollup",
-    "fix": "npx eslint ./src --fix",
-    "lint": "npx eslint ./src",
-    "rollup": "npx rollup -c .config/rollup.config.js",
-    "zip": "zip -j dist/svg.draggable.js.zip -- LICENSE README.md dist/svg.draggable.js dist/svg.draggable.js.map dist/svg.draggable.min.js dist/svg.draggable.min.js.map",
-    "prepublishOnly": "rm -rf ./dist && npm run build",
-    "postpublish": "npm run zip"
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/avanslaars/egghead-react-boilerplate/issues"
   },
-  "engines": {
-    "node": ">= 0.8.0"
-  },
+  "homepage": "https://github.com/avanslaars/egghead-react-boilerplate#readme",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-external-helpers": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/runtime": "^7.2.0",
-    "@babel/runtime-corejs2": "^7.2.0",
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "rollup": "^1.1.0",
-    "rollup-plugin-babel": "^4.3.1",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-filesize": "^6.0.0",
-    "rollup-plugin-multi-entry": "^2.1.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-terser": "^4.0.2",
-    "rollup-plugin-uglify": "^6.0.1",
-    "rollup-plugin-uglify-es": "0.0.1"
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.4",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.1",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
+    "react-axe": "^3.0.2",
+    "react-testing-library": "^5.2.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4",
+    "@babel/polyfill": "^7.0.0",
+    "prop-types": "^15.6.2"
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "git+https://github.com/grupopulpo/svg.js.git"
+    "@svgdotjs/svg.js": "^3.1.2"
   }
 }
