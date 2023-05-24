@@ -1,6 +1,6 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.1.0",
+  "name": "@userowl/svg.draw.js",
+  "version": "0.1.1-dev.5",
   "description": "",
   "main": "src/main.js",
   "scripts": {

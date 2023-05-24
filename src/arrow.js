@@ -1,4 +1,4 @@
-import { Line, extend, Container, List } from "@svgdotjs/svg.js";
+import { Container, Line, List, extend } from "@svgdotjs/svg.js";
 import { registerPlugin } from "./svg.draw.js";
 
 class Arrow extends Line {}
@@ -9,11 +9,11 @@ extend(Container, {
   arrow: function() {
     const option = {};
 
-    if (marker === undefined) {
-      marker = this.marker(10, 7, function(add) {
-        add.polygon("0 0, 0 7, 10 3.5");
-      });
-    }
+    // if (marker === undefined) {
+    marker = this.marker(10, 7, function(add) {
+      add.polygon("0 0, 0 7, 10 3.5");
+    });
+    // }
 
     return this.put(new Arrow())
       .attr(option)
