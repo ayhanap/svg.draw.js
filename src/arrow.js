@@ -10,8 +10,8 @@ extend(Container, {
     const option = {};
 
     // if (marker === undefined) {
-    marker = this.marker(10, 7, function(add) {
-      add.polygon("0 0, 0 7, 10 3.5");
+    marker = this.marker(5, 3.5, function(add) {
+      add.polygon("0 0, 0 3.5, 5 1.75");
     });
     // }
 

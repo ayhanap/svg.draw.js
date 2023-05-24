@@ -16,7 +16,15 @@ registerPlugin("rect image", {
       x: this.startPoint.x,
       y: this.startPoint.y
     };
-    var p = this.transformPoint(e.clientX, e.clientY);
+    var x, y;
+    if (event.changedTouches && event.changedTouches.length) {
+      x = event.changedTouches[0].clientX;
+      y = event.changedTouches[0].clientY;
+    } else {
+      x = event.clientX;
+      y = event.clientY;
+    }
+    var p = this.transformPoint(x, y);
 
     rect.width = p.x - rect.x;
     rect.height = p.y - rect.y;
