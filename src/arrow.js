@@ -1,7 +1,7 @@
 import { Container, Line, List, extend } from "@svgdotjs/svg.js";
 import { registerPlugin } from "./svg.draw.js";
 
-class Arrow extends Line {}
+export class Arrow extends Line {}
 
 var marker;
 

@@ -1,6 +1,11 @@
-import "./circle.js";
-import "./rectable.js";
-import "./ellipse.js";
-import "./lineable.js";
 import "./arrow.js";
+import "./circle.js";
+// import "./dot.js";
+import "./ellipse.js";
+import "./group.js";
+import "./lineable.js";
+import "./rectable.js";
+import "./svg.draw.js";
+export { Arrow } from "./arrow.js";
+export * from "./customTypings/extensionTypes";
 export * from "./svg.draw.js";

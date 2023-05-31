@@ -1,6 +1,6 @@
 import { registerPlugin } from "./svg.draw.js";
 
-registerPlugin("circle", {
+registerPlugin("circle2", {
   // eslint-disable-next-line no-unused-vars
   init: function(e) {
     var p = this.startPoint;

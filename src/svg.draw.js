@@ -219,7 +219,7 @@ class PaintHandler {
   }
 }
 
-export function registerPlugin(name, obj) {
+export const registerPlugin = (name, obj) => {
   var plugins = {};
   if (typeof name === "string") {
     plugins[name] = obj;
@@ -234,8 +234,9 @@ export function registerPlugin(name, obj) {
       drawPlugins[shapesArr[i]] = plugins[shapes];
     }
   }
-}
+};
 
+console.log("Evaluating svg.draw.js");
 extend(Element, {
   // Draw element with mouse
   draw(event, options, value) {
