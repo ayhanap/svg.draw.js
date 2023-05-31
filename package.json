@@ -13,11 +13,6 @@
     "format": "pretty-quick",
     "lint": "eslint ./"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
-    }
-  },
   "author": "",
   "license": "ISC",
   "repository": {
