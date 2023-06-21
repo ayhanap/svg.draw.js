@@ -45,7 +45,7 @@ class PaintHandler {
 
     // When we got an event, we use this for start, otherwise we use the click-event as default
     if (!event) {
-      this.parent.on("click.draw", e => {
+      this.parent.on("click.draw", (e) => {
         this.start(e);
       });
     }
@@ -182,7 +182,7 @@ class PaintHandler {
     if (draw.length) {
       temp = [
         draw[0] % this.options.snapToGrid,
-        draw[1] % this.options.snapToGrid
+        draw[1] % this.options.snapToGrid,
       ];
       draw[0] -=
         temp[0] < this.options.snapToGrid / 2
@@ -236,7 +236,6 @@ export const registerPlugin = (name, obj) => {
   }
 };
 
-console.log("Evaluating svg.draw.js");
 extend(Element, {
   // Draw element with mouse
   draw(event, options, value) {
@@ -262,5 +261,5 @@ extend(Element, {
     }
 
     return this;
-  }
+  },
 });

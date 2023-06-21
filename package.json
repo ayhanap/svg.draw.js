@@ -1,6 +1,6 @@
 {
   "name": "@userowl/svg.draw.js",
-  "version": "0.1.1-dev.17",
+  "version": "0.1.1-dev.19",
   "description": "",
   "main": "src/main.js",
   "types": "build/types/main.d.ts",
